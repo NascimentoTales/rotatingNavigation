@@ -1,0 +1,138 @@
+$textColor: #222;
+$backgroundColorBody: #333;
+$backgroundColorContainer: #fafafa;
+$backgroundColorCircle:  #ff7979;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; 
+    li{
+        list-style: none;
+    }  
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+body{
+    overflow-x: hidden;
+    background-color: $backgroundColorBody;
+    color: $textColor;
+
+    .container{
+        background-color: $backgroundColorContainer;
+        transform-origin: top left;
+        transition: transform 0.5s linear;
+        width: 100vw;
+        min-height: 100vh;
+        padding: 50px;
+
+        .circle-container{
+            position: fixed;
+            top: -100px;
+            left: -100px;
+        }
+        .circle{
+            background-color: $backgroundColorCircle;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.5s linear;
+            button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100px;
+                background: transparent;
+                border: 0;
+                font-size: 26px;
+                color: $backgroundColorContainer;
+                cursor: pointer;
+            }
+            button:focus{
+                outline: none;
+            }
+            #open{
+                left: 60%;
+            }
+            #close{
+                top: 60%;
+                transform: rotate(90deg);
+                transform-origin: top left; //tem que por essa prop 
+            }
+        }
+
+        .content{
+            max-width: 1000px;
+            margin: 50px auto;
+
+            h1{
+                margin: 0;
+            }
+            small{
+                color: #555;
+                font-style: italic;
+            }
+            img{
+                max-width: 100%;
+            }
+            p{
+                color: #333;
+                line-height: 1.5;
+                text-indent: 20px;
+                text-align: justify;
+                margin-top: 10px;
+            }
+            h3{
+                margin: 30px 0 10px 0;
+            }
+        }
+    }
+    
+    .show-nav{
+        transform: rotate(-20deg);
+                
+    }
+    .show-nav + nav li{
+        transform: translateX(0);
+        transition-delay: 0.3s;
+    }
+    .show-nav .circle{
+        transform: rotate(-70deg);
+    }
+
+    nav{
+        position: fixed;
+        bottom: 40px;
+        left: 0;
+        z-index: 100;
+        ul{
+            padding-left: 30px;
+            li{
+                text-transform: uppercase;
+                margin: 40px 0;
+                transform: translateX(-100%);
+                transition: transform 0.4s ease-in;
+                a{
+                    color: $backgroundColorContainer;
+                }
+                i{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+            li + li{
+                margin-left: 15px;
+                transform: translateX(-150%);
+
+            }
+            li + li + li{
+                margin-left: 30px;
+                transform: translateX(-200%);
+            }
+        }
+    }
+}

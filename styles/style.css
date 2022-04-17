@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+* li {
+  list-style: none;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+}
+
+body .container {
+  background-color: #fafafa;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+body .container .circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+body .container .circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+body .container .circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+body .container .circle button:focus {
+  outline: none;
+}
+
+body .container .circle #open {
+  left: 60%;
+}
+
+body .container .circle #close {
+  top: 60%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+body .container .content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+body .container .content h1 {
+  margin: 0;
+}
+
+body .container .content small {
+  color: #555;
+  font-style: italic;
+}
+
+body .container .content img {
+  max-width: 100%;
+}
+
+body .container .content p {
+  color: #333;
+  line-height: 1.5;
+  text-indent: 20px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+body .container .content h3 {
+  margin: 30px 0 10px 0;
+}
+
+body .show-nav {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+body .show-nav + nav li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+body .show-nav .circle {
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+body nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+body nav ul {
+  padding-left: 30px;
+}
+
+body nav ul li {
+  text-transform: uppercase;
+  margin: 40px 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+
+body nav ul li a {
+  color: #fafafa;
+}
+
+body nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+body nav ul li + li {
+  margin-left: 15px;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+body nav ul li + li + li {
+  margin-left: 30px;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+/*# sourceMappingURL=style.css.map */
